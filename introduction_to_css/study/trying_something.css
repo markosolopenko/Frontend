@@ -1,0 +1,59 @@
+/* #container {
+    font-size: 21px;
+}
+.main_heading {
+    background-color: green;
+}
+.main {
+    background-color: blue;
+}
+.main_footer {
+    background-color: grey;
+}
+.main_header, 
+.main_footer {
+    color: red; */
+
+
+/* Descendant Selector */
+footer p {
+    background: red;
+}
+
+/* Adjacent Selector */
+ul > li {
+    background: green;
+}
+
+/* Direct child selector */
+h1 + h4 {
+    background: hotpink;
+}
+
+/* Attribute Selector */
+a[href="#"] {
+    background: blue;
+}
+
+/* First / Last Child Selector */
+li:first-child, li:last-child {
+   background: yellow; 
+}
+
+/* n-th child selector */
+li:nth-child(2) {
+    background: orangered;
+}
+
+
+
+/* One more importand thing that always wins rule closest to the bottom */
+p {
+    font-size: 16px;
+}
+
+p {
+     font-size: 100px;  /*This will work */
+}
+
+
