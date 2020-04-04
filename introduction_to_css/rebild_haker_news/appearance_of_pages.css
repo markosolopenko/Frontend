@@ -1,0 +1,40 @@
+/* For log_in_page appearance */
+html {
+    background-image: url("/introduction_to_css/2-nature.jpg");
+}
+
+header div {
+    color: cornsilk;
+    font-size: 28px;
+} 
+header h3 {
+    color: red;
+    font-size: 25px;
+}
+article h3 {
+    color: deepskyblue;
+    font-size: 27px;
+}
+    
+
+article input {
+    margin-bottom: 8px;
+    border-style: outset;
+    font-size: 18px;
+    border-color: blue;
+}
+article label {
+    color: blue;
+    font-size: 21px;
+}
+#sub {  
+    border-style: double;
+    font-size: 17px;
+    border-radius: 48%;
+}
+a, div{
+    margin-top: 12px;
+    color: cyan;
+    font-size: 18px;
+}
+
