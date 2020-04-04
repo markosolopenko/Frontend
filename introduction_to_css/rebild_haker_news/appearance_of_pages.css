@@ -1,12 +1,15 @@
-/* For log_in_page appearance */
-html {
-    background-image: url("/introduction_to_css/2-nature.jpg");
+/*################   For log_in_page appearance ###############*/
+body.log  {
+    background-image: url("/introduction_to_css/log_in.jpg");
+    background-size: 100%;
+
+
 }
 
 header div {
     color: cornsilk;
     font-size: 28px;
-} 
+}
 header h3 {
     color: red;
     font-size: 25px;
@@ -15,7 +18,7 @@ article h3 {
     color: deepskyblue;
     font-size: 27px;
 }
-    
+
 
 article input {
     margin-bottom: 8px;
@@ -27,7 +30,7 @@ article label {
     color: blue;
     font-size: 21px;
 }
-#sub {  
+#sub {
     border-style: double;
     font-size: 17px;
     border-radius: 48%;
@@ -38,3 +41,115 @@ a, div{
     font-size: 18px;
 }
 
+/*#################### END OF LOG IN PAGE #################*/
+/* #################### */
+/* ################### */
+
+
+/*############################# Main page ##############################*/
+/* Appearance of the page body */
+.main_page {
+    background-position: center;
+    background-attachment: fixed;
+    background-image: url("/introduction_to_css/hacker.jpeg");
+    position: relative;
+}
+
+/*Title of the page*/
+#head_of_page {
+    background-color: orangered;
+}
+
+/* Power on the current webside */
+.first {
+    font-size: 24px;
+    text-decoration-line: none;
+    color: white;
+}
+
+/* Create a box arount the letter */
+.title {
+    margin: 0 30px 0 20px;
+    color: white;
+    border: 2px solid white;
+    border-left-width: 9px;
+    border-right-width: 9px;
+    font-size: 24px;
+}
+
+/* Working with title text on the page */
+#head_of_page b {
+    font-size: 25px;
+    color: black;
+
+}
+
+/* line of properties in the top of page */
+.head_line {
+    position: relative;
+    top: -2px;
+    padding-left: 30px;
+    font-size: 20px;
+}
+
+/* Power on the log in wesite for logged in */
+.second {
+    position: relative; top: -2px;
+    text-decoration-line: none;
+    font-size: 20px;
+    color: black;
+}
+
+/* Power on the site to loggin with name login */
+.logg {
+    text-decoration-line: none;
+    font-size: 20px;
+    margin-left: 1000px;
+    border: 2px solid black;
+    background-color: black;
+    padding-top: 20px;
+    padding-bottom: 2px;
+    position: relative; top: -1px
+}
+
+/* apeearance of article block */
+.haker_page {
+    max-width: 780px;
+    margin: 0 auto;
+    background-color: rgba(0, 0, 1, 0.6);
+}
+
+/*  Article text and combination with it */
+.div {
+    color: rgba(2, 200, 30, 1);
+    font-family: Courier;
+    font-size: 14px;
+}
+
+/* Under text text */
+.under {
+    font-size: 10px;
+    color: green;
+    padding-left: 20px;
+}
+
+
+/* The footer peace of the page */
+footer {
+    background-color: orangered;
+}
+.foot {
+    position: relative;
+    font-size: 20px;
+    color:black;
+    left: 500px;
+}
+.search {
+    margin-top: 17px;
+    text-align: center;
+}
+input {
+    font-size: 20px;
+    font-style: oblique;
+    
+}
