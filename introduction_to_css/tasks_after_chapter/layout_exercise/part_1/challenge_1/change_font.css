@@ -1,0 +1,37 @@
+body {
+    max-height: 780px;
+    max-width: 780px;
+    margin: auto;
+}
+ul {
+    list-style-type: none;
+}
+#wrap {
+    background-color: rgb(40, 80, 190);
+    width: 800px;
+    height: 600px;
+}
+
+#nav {
+    background-color: cyan;
+    padding-top: 20px;
+    padding-bottom: 240px;
+    padding-left: 15px;
+    margin-right: 550px;
+    margin-left: 75px;
+}
+
+
+#content {
+    background-color: rgb(30, 140, 190);
+    text-align: center;
+    padding-top: 26px;
+    margin-top: -444px;
+    margin-left: 250px;
+    margin-right: 75px;
+}
+
+.copyright {
+    background-color: rgb(40, 80, 190);
+}
+

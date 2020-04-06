@@ -1,0 +1,57 @@
+/* First stylesheet */
+/* #wrap {
+    display: table;
+    width: 730px;
+    height: 450px;
+    margin: 5px;
+    background-color: rgba(30, 190, 200, 0.7);
+}
+ul {
+    display: table-row;
+    text-align: center;
+} */
+
+/* Second stylesheet */
+body {
+    background-color: pink;
+}
+ul {
+    list-style-type: none;
+}
+
+#wrap {
+    background-color: white;
+    display: table;
+    border: dotted;
+    border-width: 4px;
+    height: 450px;
+    max-width: 670px;
+    margin: auto;
+
+}
+
+h1 {
+    padding-bottom: 10px;
+    border-bottom: dotted;
+    text-align: center;
+}
+p {
+    margin: 0 19px;
+}
+
+ul {
+    font-family: 'Times New Roman', Times, serif;
+    display: table-row;
+    vertical-align: middle;
+    text-align: center;
+}
+.copyright {
+
+    text-align: center;
+}
+
+
+
+
+
+
