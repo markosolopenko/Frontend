@@ -1,6 +1,6 @@
 /*################   For log_in_page appearance ###############*/
 body.log  {
-    background-image: url("/introduction_to_css/log_in.jpg");
+    background-image: url("/introduction_to_css/photos_for_websites/haker_for_logg.jpg");
     background-size: 100%;
 
 
@@ -51,7 +51,7 @@ a, div{
 .main_page {
     background-position: center;
     background-attachment: fixed;
-    background-image: url("/introduction_to_css/hacker.jpeg");
+    background-image: url("/introduction_to_css/photos_for_websites/hacker.jpeg");
     position: relative;
 }
 

@@ -2,7 +2,7 @@ h1 {
     /* margin-left: 700px; */
     /* margin-right: 700px; */
     background-size: 100px 100px;
-    /* background-color: firebrick; */
+    background-color: firebrick;
     border-radius: 12px 12px 12px 12px;
     margin-top: 13%;
     font-style: oblique;
@@ -103,7 +103,7 @@ header {
     
 
 body {
-    background-image: url("/introduction_to_css/2-nature.jpg");
+    background-color: grey;
     margin: 0;
     padding: 0;
 }
