@@ -1,4 +1,5 @@
 *.png
+*.jpg
 *.jpeg
 .photos_for_websites/
 .study_selectors_box_model/*
