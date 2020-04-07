@@ -1,0 +1,49 @@
+#conteiner {
+    background-color: black;
+    border: 4px solid aqua;
+    height: 600px;
+    width: 800px;
+    margin: auto;
+}
+h2 {
+    color: white;
+    border-bottom: 4px solid aqua;
+}
+
+.purple {
+    background-color: purple;
+    width: 690px;
+    height: 100px;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.red {
+    background-color: tomato;
+    width: 220px;
+    height: 400px;
+    margin-top: 15px;
+    margin-left: 56px;
+    
+    
+}
+
+.green {
+    background-color: greenyellow;
+    width: 220px;
+    height: 400px;
+}
+.gold {
+    background-color: gold;
+    width: 220px;
+    height: 400px;
+}
+
+.green, .red, .gold {
+    display: inline-block;
+    margin-right: 10px;
+    text-align: center;
+    
+}
