@@ -1,0 +1,16 @@
+.col-4, .col-6, .col-12 {height: 300px;}
+.col-4 {width: 100%; background-color: blue;}
+.col-6 {width: 100%; background-color: yellow;}
+/* class col-4 / class col-6*/
+@media (min-width: 765px) {.col-4 {width: 100%; background-color: red;}}
+@media (min-width: 960px) {
+    .col-4 {width: 33%; background-color:aqua;}
+    .col-6 {width: 50%; background-color: seagreen;}}
+
+/* class col-12 */
+@media (min-width: 100rem) {.col-12 {width: 100%; background-color: darkgoldenrod;}}
+
+
+
+
+
