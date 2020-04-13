@@ -11,10 +11,10 @@
 <body>
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
         <a class="navbar-brand" href="#">LOGO</a>
-        <button class="navbar-toggler" type="button" data-toggler="collapse" data-target="#collapsed-content">
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#content">
             <span class="navbar-toggler-icon"></span>
         </button>
-        <div class="collapse navbar-collapse" id="collapsed-content">
+        <div class="collapse navbar-collapse" id="content">
             <ul class="navbar-nav ml-auto">
                 <li class="nav-item active">
                     <a href="#" class="nav-link">Home</a>
@@ -26,15 +26,13 @@
                     <a href="#" class="nav-link">About us</a>
                 </li>
                 <li class="nav-item">
-                    <a href="#" class="nav-link">Messages</a>
+                    <a href="#" class="nav-link">Messages<span class="badge badge-success ml-1">12</span></a>
                 </li>
             </ul>
-            <a href="#" class="btn btn-success text-light pt-0 pb-0 pl-1 pr-1" role="button"><small><dt>12</dt></small></a>
         </div>
     </nav>
-    
     <h1 class="ml-3 mt-3"><strong>Dashboard:</strong></h1>
-    <div class="mx-lg-3">
+    <div class="container-fluid">
         <table class="table mt-4 table-striped table-hover">
             <thead>
                 <tr>
@@ -49,53 +47,44 @@
                     <td>Steph</td>
                     <td>Warriors</td>
                     <td>Yes</td>
-                    <td><button role="button" class="btn btn-danger py-1 px-2">
-                        <small><i class="oi oi-x"></i></small></button></td>
+                    <td><button role="button" class="btn btn-danger py-1 px-2"><i class="fa fa-times"></i></button></td>
                 </tr>
                 <tr>
                     <td>Lebron</td>
                     <td>Cavaliers</td>
                     <td>Yes</td>
-                    <td><button role="button" class="btn btn-danger py-1 px-2">
-                        <small><i class="oi oi-x"></i></small></button></td>
+                    <td><button role="button" class="btn btn-danger py-1 px-2"><i class="fa fa-times"></i></button></td>
                 </tr>
                 <tr>
                     <td>Dwayne</td>
                     <td>Heat</td>
                     <td>Yes</td>
-                    <td><button role="button" class="btn btn-danger py-1 px-2">
-                        <small><i class="oi oi-x"></i></small></button></td>
+                    <td><button role="button" class="btn btn-danger py-1 px-2"><i class="fa fa-times"></i></button></td>
                 </tr>
                 <tr>
                     <td>Kobe</td>
                     <td>Lakers</td>
-                    <td>Yes<button type="button" class="btn btn-warning btn-sm pt-0 pb-0 px-1 ml-1">
-                        <small><dt>Last</dt></small></button></td>
-                    <td><button role="button" class="btn btn-danger py-1 px-2">
-                        <small><i class="oi oi-x"></i></small></button></td>
+                    <td>Yes<span class="badge badge-warning ml-1">Last</span></td>
+                    <td><button role="button" class="btn btn-danger py-1 px-2"><i class="fa fa-times"></i></button></td>
                 </tr>
                 <tr>
                     <td>Isaiah</td>
                     <td>Celtics</td>
-                    <td>Yes<button type="button"class="btn btn-sm btn-success py-0 px-1 ml-1">
-                        <small><dt>First</dt></small></button></td>
-                    <td><button role="button" class="btn btn-danger py-1 px-2">
-                        <small><i class="oi oi-x"></i></small></button></td>
+                    <td>Yes<span class="badge badge-success ml-1">First</span></td>
+                    <td><button role="button" class="btn btn-danger py-1 px-2"><i class="fa fa-times"></i></button></td>
                 </tr>
             </tbody>
     </table>
     </div>
     <hr class="mx-lg-3">
     <h2 class="ml-3 mt-2"><strong>Todos</strong></h2>
-    <div class="mx-lg-3 mt-3">
-        <table class="table">
-            <tr class="table-success table-bordered"><td style="border-radius: 10px 10px 0 0;">Feel good about Bootstrap</td></tr>
-            <tr class="table-info table-bordered"><td>Feel informed about Bootstrap</td></tr>
-            <tr class="table-warning table-bordered"><td>Feel warned about Bootstrap</td></tr>
-            <tr class="table-warning table-bordered"><td>Maybe I should read the docs...</td></tr>
-            <tr class="table-danger table-bordered"><td>Danger zone</td></tr>
-            <tr class="table-danger table-bordered"><td style="border-radius: 0 0 10px 10px;">I really should read the docs...</td></tr>
-        </table>
+    <div class="list-group my-3 mx-lg-3">
+        <a href="#" class="list-group-item list-group-item-success">Feel good about Bootstrap</a>
+        <a href="#" class="list-group-item list-group-item-info">Feel informed about Bootstrap</a>
+        <a href="#" class="list-group-item list-group-item-warning">Feel warned about Bootstrap</a>
+        <a href="#" class="list-group-item list-group-item-warning">Maybe I should read the docs...</a>
+        <a href="#" class="list-group-item list-group-item-danger">Danger zone</a>
+        <a href="#" class="list-group-item list-group-item-danger">I really should read the docs...</a>
     </div>
 <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script> 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js" integrity="sha384-b/U6ypiBEHpOf/4+1nzFpr53nxSS+GLCkfwBdFNTxtclqqenISfwAzpKaMNFNmj4" crossorigin="anonymous"></script>
