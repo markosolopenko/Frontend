@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <script src="https://code.jquery.com/jquery-2.1.0.js"></script>
+    <meta charset="UTF-8">
+    <title>Перемещение мышки</title>
+</head>
+<body>
+    <h1 id="heading">Привет, мир!</h1>
+<script>
+    let clickHandler = function(event) {
+         $("#heading").offset({  
+                left: event.pageX,
+                top: event.pageY
+            });
+        }
+    $("html").mousemove(function (event) {
+        $("html").click(clickHandler);
+    });
+</script>
+</body>
+</html>

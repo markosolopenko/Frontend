@@ -1,0 +1,57 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <!-- <link rel="stylesheet" href="index.css"> -->
+  <script>
+    document.onclick = function(e) { // shows click coordinates
+      coords.innerHTML = e.clientX + ':' + e.clientY;
+    };
+  </script>
+</head>
+
+<body>
+
+  Click anywhere to get window coordinates.
+  <br> That's for testing, to check the result you get by JavaScript.
+  <br>
+  <div id="coords">(click coordinates show up here)</div>
+
+
+  <div id="field">
+    . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+    . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+  </div>
+
+
+  <div class="triangle-right" style="left:-20px;top:-176px">1</div>
+  <div class="triangle-right" style="left:-10px;top:-178px">3</div>
+  <div class="triangle-right" style="left:190px;top:-40px">4</div>
+  <div class="triangle-right" style="left:200px;top:-42px">2</div>
+
+
+
+  <div class="first">(my result)</div>
+  <div class="second">(second)</div>
+  <div class="third">(third)</div>
+
+
+  <script>
+    let triangle = document.querySelectorAll('.triangle-right')
+    let divSec = document.querySelector('.second');
+    let div = document.querySelector('.first');
+    let divThi = document.querySelector('.third');
+    let field = document.querySelector('#field');
+    for(let i = 0; i < triangle.length; i++) {
+        let coords = triangle[i].getBoundingClientRect();
+        div.textContent = `left, top === ${coords.left}:${coords.top} ///// right, bottom === ${coords.right}:${coords.bottom}`;
+        divSec.textContent = `left === ${coords.left + field.clientLeft} ///// top === ${coords.top + field.clientTop}`;
+        divThi.textContent = `left === ${coords.left + triangle[i].clientLeft + triangle[i].clientWidth} ////// top === ${coords.top + triangle[i].clientTop + triangle[i].clientHeight}`;
+    }
+
+    
+  </script>
+
+</body>
+</html>

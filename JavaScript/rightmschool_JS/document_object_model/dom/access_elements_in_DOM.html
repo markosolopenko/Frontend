@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <!-- make sure for now that your script tag is in the head -->
+    <title>Document</title>
+</head>
+<body id= "container">
+    <div class="hello">
+        Hello World
+    </div>
+    <div class="hello">
+        Hello Everyone!
+    </div>
+    <a href="#">This link goes nowhere!</a>
+    <button>Click me!</button>
+    <script>
+        // Select one element
+        var container = document.getElementById("container");
+        var container = document.querySelector("#container");
+        // Select multiple elements
+        var divs = document.getElementsByTagName("div");
+        var divs = document.querySelectorAll("div");
+
+        // Select multiple but with class selector
+        var divsWithClassOfHello = document.getElementsByClassName("hello");
+        var divsWithClassOfHello = document.querySelectorAll(".hello");
+    </script>
+</body>
+</html>

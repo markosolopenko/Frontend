@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+
+    <script>
+        function showNotification(options) {
+            let newDiv = document.createElement('div');
+            newDiv.className = 'notification';
+
+            for(let [key, value] of Object.entries(options)) {
+                if(key === 'className') {
+                    newDiv.classList.add(value);
+                }else if(key === 'top') {
+                    newDiv.style.marginTop = value + 'px';
+                }else if(key === 'left') {
+                    newDiv.style.marginLeft = value + 'px';
+                }else if(key === 'html') {
+                    newDiv.innerHTML = value;
+                }
+            }
+            document.body.append(newDiv);
+
+            // setTimeout(() => newDiv.remove(), 1500);
+        }
+    showNotification({left: 20, top: 20, html: 'Hello World', className: 'some'});
+    </script>
+</body>
+</html>

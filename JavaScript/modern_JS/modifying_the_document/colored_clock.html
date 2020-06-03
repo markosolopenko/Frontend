@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <style>
+        span {
+            font-size: 30px;
+        }
+        .hour {
+            color: blue;
+        }
+        .minutes {
+            color: green;
+        }
+        .seconds {
+            color: red;
+        }
+    </style>
+
+
+    <div id="clock">
+        <span class="hour">hh</span><span>:</span><span class="minutes">mm</span><span>:</span><span class="seconds">ss</span>
+    </div>
+
+    <input class="start" type="button" onclick="clockStart()" value="Start">
+
+  
+    <input class='stop' type="button" onclick="clockStop()" value="Stop">
+
+
+    <script>
+    
+        function update() {
+            let clock = document.getElementById('clock');
+            let d = new Date();
+            let hours = d.getHours();
+            if(hours < 10) {
+                hours = '0' + hours;
+            }
+            clock.children[0].innerHTML = hours;
+
+
+            let minutes = d.getMinutes();
+            if(minutes < 10) {
+                minutes = '0' + minutes;
+            } 
+            clock.children[2].innerHTML = minutes;
+
+            let seconds = d.getSeconds();
+            if(seconds < 10) {
+                seconds = '0' + seconds;
+            } 
+            clock.children[4].innerHTML = seconds;
+        }
+        let timer;
+        function clockStart() {
+            timer = setInterval(update, 1000);
+            update();
+        }
+        function clockStop() {
+            clearInterval(timer);
+            timer = null;
+        }
+    </script>
+    
+</body>
+</html>

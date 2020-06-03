@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="so.css">
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<body id= "container">
+    <div class="hello">
+        Hello World
+    </div>
+    <div class="hello">
+        Hello Everyone!
+    </div>
+    <a href="#">This link goes nowhere!</a>
+    <button>Click me!</button>
+    <script>
+        // create new element
+        var newDiv = document.createElement("div");
+
+
+        // appending elements
+        var button = document.createElement("button");
+        button.innerText = "I am a button created with JavaScript!";
+
+        var container = document.getElementById("container");
+        container.appendChild(button);
+
+    </script>
+</body>
+</html>

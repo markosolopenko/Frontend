@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let div = document.createElement('div');
+
+        
+        div.style.overflowY = 'scroll';
+        div.style.height = '150px';
+        div.style.width = '150px';
+        div.innerHTML = "Lorem ipsum dolor, sit amet consectetur adipisicing elit. \
+                        Impedit quidem itaque sapiente reprehenderit \
+                        nostrum neque asperiores fuga sint iure deserunt totam obcaecati, \
+                        cupiditate numquam earum nulla quo mollitia consectetur eos!";
+        
+        document.body.append(div);
+        
+        let scrollWidth = div.offsetWidth - div.clientWidth;
+
+        div.remove();
+        alert(scrollWidth);
+
+        
+    </script>
+</body>
+</html>

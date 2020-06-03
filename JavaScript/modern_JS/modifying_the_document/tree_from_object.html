@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+
+
+
+    <script>
+        let data = {
+            "Fish": {
+                "trout": {},
+                "salmon": {}
+            },
+
+            "Tree": {
+                "Huge": {
+                "sequoia": {},
+                "oak": {}
+                },
+                "Flowering": {
+                "apple tree": {},
+                "magnolia": {}
+                }
+            }
+        };
+
+        function createTree(container, data) {
+            // main tag div
+            let div = document.createElement('div');
+            div.id = 'container';
+
+            // fish
+            let ulMain = document.createElement('ul');
+            for(let [key, value] of Object.entries(data)) {
+                let liMain = document.createElement('li');
+                liMain.textContent = key;
+                ulMain.append(liMain);
+                
+                if(typeof value === 'object') {
+                    let ulInner = document.createElement('ul');
+                    for(let [ke, val] of Object.entries(value)) {
+                        let liInner = document.createElement('li');
+                        liInner.textContent = ke;
+
+                        ulInner.append(liInner);
+
+                        if(typeof val === 'object') {
+                            let ulInnerInner = document.createElement('ul');
+                            for(let [k, v] of Object.entries(val)) {
+                                let liInnerInner = document.createElement('li');
+                                liInnerInner.textContent = k;
+
+                                ulInnerInner.append(liInnerInner);
+                            }
+                            liInner.append(ulInnerInner);
+                        }
+                    }
+                    liMain.append(ulInner);  
+                }
+            }
+            div.append(ulMain);
+            document.body.insertAdjacentElement('beforebegin' ,div);
+        }
+
+
+        let container = document.getElementById('container');
+        createTree(container, data);
+    </script>
+</body>
+</html>

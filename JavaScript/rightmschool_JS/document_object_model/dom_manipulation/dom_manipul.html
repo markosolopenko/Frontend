@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="so.css">
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<body id= "container">
+    <div class="hello">
+        Hello World
+    </div>
+    <div class="hello">
+        Hello Everyone!
+    </div>
+    <a href="#">This link goes nowhere!</a>
+    <button>Click me!</button>
+    <script>
+        var firstDiv = document.getElementsByTagName("div")[0];
+
+        firstDiv.innerHTML = "Just changed!";
+        var secondDiv = document.getElementsByTagName("div")[1];
+
+        secondDiv.innerText = "Just changed Again!";
+        var firstDiv = document.getElementsByTagName("div")[0];
+
+        firstDiv.style.color = "red";
+        firstDiv.style.backgroundColor = "teal";
+        var body = document.getElementById("container");
+
+        body.getAttribute("id"); // "container"
+        body.setAttribute("id", "new_container");
+        body.getAttribute("id");
+        var secondDiv = document.getElementsByTagName("div")[1];
+
+        secondDiv.classList; // ["hello"]
+        secondDiv.classList.add("another_class");
+        secondDiv.classList; // ["hello", "another_class"]
+        secondDiv.classList.remove("hello");
+        secondDiv.classList; // [another_class"]
+
+
+
+        // Traversing
+        var container = document.getElementById("container");
+        container.childNodes; // // this contains all of the nodes (including text nodes) that are children
+        container.childNodes.length; // 11
+        container.children; // this contains all of the elements that are children of the element we have selected
+        container.children.length; // 5
+
+        var link = document.querySelector("a");
+        link.parentElement; // <body id="container">...</body>
+        link.previousElementSibling; // <div class="hello">Hello Everyone!</div>
+        link.previousSibling; // text node
+        link.nextSibling; // text node
+        link.nextElementSibling; // <button>​Click me!​</button>​
+
+    </script>
+</body>
+</html>

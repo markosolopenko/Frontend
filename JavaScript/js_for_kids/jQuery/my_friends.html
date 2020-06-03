@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script src="https://code.jquery.com/jquery-2.1.0.js"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1 id="main-heading">Привет, мир!</h1>
+
+
+
+    <script>
+        let names = ['Roman', 'Artur', 'Vitalik', 'Saniya'];
+        for(let name of names) {
+            $('body').append(`<p>${name}</p>`);
+        }
+
+        $('h1').text('My friends');
+        $('p').hide().fadeIn(4000);
+        $('p').append(' the best!!');
+
+    </script>
+</body>
+</html>

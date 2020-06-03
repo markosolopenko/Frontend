@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <script src="https://code.jquery.com/jquery-2.1.0.js"></script>
+    <meta charset="UTF-8">
+    <title>Интерактивное программирование</title>
+</head>
+<body>
+    <h1 id="heading">Привет, мир!</h1>
+    <script src="https://code.jquery.com/jquery-2.1.0.js"> 
+    </script>
+    <script>
+        var leftOffset = 0;
+        let switchSide = true;
+        let topOffset = 0;
+        let a = 1;
+        var moveHeading = function () {
+            if(switchSide === true) {
+                $("#heading").offset({ left: leftOffset });
+                leftOffset += a;
+                if(leftOffset === 200 || leftOffset === 0) {
+                    switchSide = false; 
+
+                }
+            }else if(switchSide === false) {
+                $("#heading").offset({ top: topOffset });
+                topOffset += a;
+                if (topOffset == 200) {
+                    switchSide = true;
+                    a = -1;
+                }else if(topOffset === 0) {
+                    a = 1;
+                    switchSide = true;
+                }
+            }
+        };
+        let s = setInterval(moveHeading, 20);
+        $("html").click(() => clearInterval(s));
+                
+    </script>
+</body>
+</html>

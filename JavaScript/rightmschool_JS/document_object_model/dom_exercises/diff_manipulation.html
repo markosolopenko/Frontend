@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<body>
+    <div class="header"></div>
+    <section id="container">
+        <ul>
+            <li class="first">one</li>
+            <li class="second">two</li>
+            <li class="third">three</li>
+        </ul>
+        <ol>
+            <li class="first">one</li>
+            <li class="second">two</li>
+            <li class="third">three</li>
+        </ol>
+    </section>
+    <div class="footer">Hello</div>
+    <script>
+        // 1
+        let container = document.getElementById('container');
+        // 2
+        let containerQuerety = document.querySelector('#container');
+        // 3
+        let secondElement = document.getElementsByClassName('second');
+        for(let i = 0; i < secondElement.length; i++) {
+            secondElement[i].style.backgroundColor = 'green';
+        }
+        // 4
+        let thirdOl = document.querySelectorAll('ol .third');
+        for(let i = 0; i < thirdOl.length; i++) {
+            thirdOl[i].style.backgroundColor = 'blue';
+        }
+        // 5 giv text 'hello' for section with id container
+        // container.innerText = "Hello";
+
+        // 6 add class main to the div with class footer
+        let footer = document.querySelector('.footer'); 
+        footer.classList.add('main');
+
+        // 7 remove class main to the div with div of class footer
+        footer.classList.remove('main');
+
+        // 8 create new li element 
+        let newLi = document.createElement('li');
+
+        // 9 add inner text to li 
+        newLi.innerText = 'four';
+
+        // 10 apped li to the ul elements
+        let ul = document.querySelector('ul');
+        ul.appendChild(newLi);
+
+        // 11 
+        let ol = document.querySelectorAll('ol li');
+        for(let i = 0; i < ol.length; i++) {
+            ol[i].style.color = '#fff';
+            ol[i].style.background = "green";
+        }
+        //  12 remove div with class footer
+        let body = document.querySelector('body');
+        body.removeChild(footer);
+        // or 
+        footer.remove();
+    </script>
+</body>
+</html>

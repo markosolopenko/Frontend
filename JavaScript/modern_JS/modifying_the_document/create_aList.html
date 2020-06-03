@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <style>
+        div {
+            margin: 20px 0 0 20px;
+            color: black;
+            font-size: 20px;
+            font-weight: bold;
+        }
+        ol {
+            list-style: disc;
+        }
+    </style>
+    
+
+
+    <script>
+        let ol = document.createElement('ol');  
+        let div = document.createElement('div');
+        div.append('Create a list');
+
+        document.body.insertAdjacentElement('beforebegin', div);
+        while(true) {
+            let ask = prompt("Put element");
+            if(ask === '' || ask === null) {
+                break;
+            }else {
+                let li = document.createElement('li');
+                li.append(ask);
+                ol.append(li)
+
+                document.body.insertAdjacentElement('afterbegin' ,ol);
+            }
+        }
+            
+    </script>
+</body>
+</html>
