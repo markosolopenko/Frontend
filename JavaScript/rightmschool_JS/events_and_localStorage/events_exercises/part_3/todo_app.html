@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script src="https://kit.fontawesome.com/89b7791523.js" crossorigin="anonymous"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Balsamiq+Sans:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css">
+    <link rel="stylesheet" href="todo_app.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="todos">
+        <div class="text">
+            Todos on this week
+        </div>
+        <div class="form__add">
+            <form action="">
+                <input type="text" name="name" id="todo">
+                <div class="btn__submit">
+                    <i class="fas fa-plus"></i>
+                </div>
+                <div class="select">
+                    <select class="filter" name='todos'>
+                        <option value="all">All</option>
+                        <option value="completed">Completed</option>
+                        <option value="uncompleted">Uncompleted</option>
+                    </select>
+                </div>
+            </form>
+        </div>
+        <ul class="todos__list"></ul>
+        
+    </div>
+    
+
+    <script src="todo_app.js"></script>
+</body>
+</html>

@@ -2,5 +2,11 @@
     "liveServer.settings.port": 5501,
     "workbench.preferredDarkColorTheme": "Visual Studio Dark",
     "workbench.preferredHighContrastColorTheme": "Visual Studio Dark",
-    "workbench.colorTheme": "Monokai"
+    "workbench.colorTheme": "Monokai",
+    "python.testing.pytestArgs": [
+        "python"
+    ],
+    "python.testing.unittestEnabled": false,
+    "python.testing.nosetestsEnabled": false,
+    "python.testing.pytestEnabled": true
 }

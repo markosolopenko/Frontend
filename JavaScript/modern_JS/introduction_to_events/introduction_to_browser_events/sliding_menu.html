@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <style>
+        body {
+            font-size: 26px;
+        }
+        .menu {
+            position: relative;
+        }
+        .open__menu {
+            color: green;
+            cursor: pointer;
+        }
+        .close__menu {
+            color: green;
+            display: none;
+            cursor: pointer;
+        }
+        ul {
+            position: absolute;
+            top: 10px;
+            left: 0;
+
+            display: none;
+
+        }
+        li {
+            list-style: none;
+        }
+    </style>
+    <div class='menu'>
+        <span class='open__menu'>▶</span> <span class='close__menu'>▼</span> Sweeties (click me)!
+    </div>
+    <ul>
+        <li>Cake</li>
+        <li>Donut</li>
+        <li>Honey</li>
+    </ul>
+
+
+    <script>
+        let openMenu = document.querySelector('.open__menu');
+        let ul = document.querySelector('ul');
+        let closeMenu = document.querySelector('.close__menu');
+
+        openMenu.addEventListener('click', function() {
+            ul.style.display = 'block';
+            openMenu.style.display = 'none';
+            closeMenu.style.display = 'inline-block';
+
+            closeMenu.addEventListener('click', function() {
+                ul.style.display = 'none';
+                openMenu.style.display = 'inline-block';
+                closeMenu.style.display = 'none';
+            });
+
+        });
+        
+
+    </script>
+    
+</body>
+</html>

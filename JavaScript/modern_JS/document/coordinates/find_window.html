@@ -32,24 +32,29 @@
 
 
 
-  <div class="first">(my result)</div>
-  <div class="second">(second)</div>
-  <div class="third">(third)</div>
+  <div class="first">(uppert-left outer)</div>
+  <div class="second">(bottom-right outer)</div>
+  <div class="third">(upper-left inner)</div>
+  <div calss="fourth">(bottom-right inner)</div>
 
 
   <script>
     let triangle = document.querySelectorAll('.triangle-right')
-    let divSec = document.querySelector('.second');
-    let div = document.querySelector('.first');
-    let divThi = document.querySelector('.third');
     let field = document.querySelector('#field');
-    for(let i = 0; i < triangle.length; i++) {
-        let coords = triangle[i].getBoundingClientRect();
-        div.textContent = `left, top === ${coords.left}:${coords.top} ///// right, bottom === ${coords.right}:${coords.bottom}`;
-        divSec.textContent = `left === ${coords.left + field.clientLeft} ///// top === ${coords.top + field.clientTop}`;
-        divThi.textContent = `left === ${coords.left + triangle[i].clientLeft + triangle[i].clientWidth} ////// top === ${coords.top + triangle[i].clientTop + triangle[i].clientHeight}`;
-    }
+   
+    
+    let div = document.querySelector('.first');
+    let divSec = document.querySelector('.second');
+    let divThi = document.querySelector('.third');
+    let divFou = document.querySelector('.fourth');
 
+    let upperLeft = field.getBoundingClientRect();
+
+
+    div.textContent = `upper-left outer corner coordinates === ${upperLeft.left}:${upperLeft.top}`;
+    divSec.textContent = `bottom-right corner coordinate === ${upperLeft.right}:${upperLeft.bottom}`;
+    divThi.textContent = `upper-left inner corner coordinate === ${upperLeft.left + field.clientLeft}:${upperLeft.top + field.clientTop}`;
+    divFou.textContent = `bottom-right inner corner coordinates === ${upperLeft.right - field.clientLeft}:${upperLeft.bottom - field.clientTop}`; 
     
   </script>
 

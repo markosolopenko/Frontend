@@ -1,0 +1,69 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+  <meta charset="utf-8">
+</head>
+<body>
+    <style>
+        .with__submenu:hover {
+            color: black;
+            font-weight: bold;
+        }
+        .with__submenu li{
+            display: none;
+        }
+        .with__sub {
+            cursor: pointer;
+        }
+    </style>
+
+  <ul class="tree" id="tree">
+    <li class="with__sub">Animals
+      <ul>
+        <li class="with__sub">Mammals
+          <ul>
+            <li>Cows</li>
+            <li>Donkeys</li>
+            <li>Dogs</li>
+            <li>Tigers</li>
+          </ul>
+        </li>
+        <li class="with__sub">Other
+          <ul>
+            <li>Snakes</li>
+            <li>Birds</li>
+            <li>Lizards</li>
+          </ul>
+        </li>
+      </ul>
+    </li>
+    <li class="with__sub">Fishes
+      <ul>
+        <li class="with__sub">Aquarium
+          <ul>
+            <li>Guppy</li>
+            <li>Angelfish</li>
+          </ul>
+        </li>
+        <li class="with__sub">Sea
+          <ul>
+            <li>Sea trout</li>
+          </ul>
+        </li>
+      </ul>
+    </li>
+  </ul>
+
+
+<script>
+    let tree = document.querySelector('#tree');
+
+    tree.addEventListener('click', function(event) {
+        let current = event.target;
+        if(current.classList.contains('with__sub')) {
+            current.classList.toggle('with__submenu');
+        }
+    });
+</script>
+</body>
+</html>

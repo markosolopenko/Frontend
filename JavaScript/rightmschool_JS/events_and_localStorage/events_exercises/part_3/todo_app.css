@@ -1,0 +1,151 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+
+}
+
+body {
+    display: flex;
+    justify-content: center;
+
+    background: linear-gradient(120deg, #cbff52, #74dfff);
+    color: white;
+    font-family: 'Balsamiq Sans', cursive;
+}
+
+.text {
+    color: black;
+    font-size: 30px;
+    text-align: center;
+}
+form {
+    display: flex;
+}
+.btn__submit {
+    background-color: #cbff52;
+    width: 40px;
+    color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 40px;
+    cursor: pointer;
+    transition: background-color .3s linear;
+}
+.btn__submit:hover {
+    background-color: white;
+}
+
+.todos {
+    margin-top: 300px;
+}
+#todo {
+    width: 300px;
+    border: none;
+    padding: .4em;
+    font-size: 17px;     
+}
+#todo:focus {
+    outline: none;
+}
+
+.list__item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    list-style: none;
+    background-color: white;
+    width: 350px;
+    height: 40px;
+    margin-top: 20px;
+    color: black;
+    font-size: 20px;
+
+    transition: transform .4s linear;
+    
+}  
+.list__item span {
+    flex: 1;
+    padding-left: 1em;
+}
+#done {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #cbff52;
+    width: 40px;
+    height: 40px;
+    cursor: pointer;
+    transition: background-color .3s linear;
+}
+#done:hover {
+    background-color: white;
+    color: black;
+}
+#remove {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #ff6652;
+    width: 40px;
+    height: 40px;
+    cursor: pointer;
+    transition: background-color .3s linear;
+}
+#remove:hover {
+    background-color: white;
+    color: black;
+}
+
+.fall {
+    /* transition: transform .4s linear; */
+    transform: translateY(100px) rotateZ(20deg);
+    opacity: 0.4;
+}
+
+
+select {
+    -webkit-appearance: none;
+    outline: none;
+    appearance: none;
+    border: none;
+}
+.select {
+    position: relative;
+}
+select {
+    color: #ff6652;
+    background-color: white;
+    width: 200px;
+    margin-left: 20px;
+    font-size: 16px;
+    padding: 0.7em;
+    cursor: pointer; 
+}
+
+
+.select::after {
+    padding: .65em;
+    content: "\25BC";
+    color: black;
+    background-color: #ff6652;   
+    position: absolute;
+    right: 0;
+    top: 0;
+    pointer-events: none;
+
+    transition: background-color .3s linear;
+}
+.select:hover::after {
+    background-color: white;
+}
+
+
+.done__item {
+    text-decoration: line-through;
+}
+.opacity {
+    opacity: 0.5;
+}
