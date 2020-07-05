@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div>Press some combination</div>
+
+
+    <script>
+        'use strict';
+
+        function runOnKeys(func, ...args) {
+            let s = new Set();
+
+            document.addEventListener('keydown', function(event) {
+                s.add(event.code);
+                
+                for(let code of args) {
+                    if(!s.has(code)) {
+                        return;
+                    }
+                }
+                console.log(s);
+                s.clear();
+
+                func();
+            });
+
+            document.addEventListener('keyup', function(event) {
+                s.delete(event.code);
+            });
+        }
+
+        runOnKeys(() => alert("Work`s good!!!"), 'KeyQ', 'KeyW');
+    </script>
+</body>
+</html>

@@ -1,0 +1,82 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <style>
+    body {
+      height: 2000px;
+      /* make body scrollable, the tooltip should work after the scroll */
+    }
+
+    .tooltip {
+      /* some styles for the tooltip, you can use your own instead */
+      position: fixed;
+      padding: 10px 20px;
+      border: 1px solid #b3c9ce;
+      border-radius: 4px;
+      text-align: center;
+      font: italic 14px/1.3 sans-serif;
+      color: #333;
+      background: #fff;
+      box-shadow: 3px 3px 3px rgba(0, 0, 0, .3);
+    }
+    button:hover .span {
+        display: block;
+    }
+    .span {
+        position: absolute;
+        border: 1px solid rgba(118, 124, 124, 0.884);
+        padding: 1em;
+        font-style: italic;
+        font-size: 17px;
+        background-color: white;
+        color: black;
+        border-radius: 15px;
+        display: none;
+        top: 110px;
+    }
+  </style>
+</head>
+
+<body>
+
+  <p>LaLaLa LaLaLa LaLaLa LaLaLa LaLaLa LaLaLa LaLaLa LaLaLa LaLaLa</p>
+  <p>LaLaLa LaLaLa LaLaLa LaLaLa LaLaLa LaLaLa LaLaLa LaLaLa LaLaLa</p>
+
+  <div>
+    <button data-tooltip="the tooltip is longer than the element">Short button</button>
+    <button data-tooltip="HTML<br>tooltip">One more button</button>
+  </div>
+  
+
+  <p>Scroll the page to make buttons appear on the top, check if the tooltips show up correctly.</p>
+
+
+  <script>
+    const buttons = document.querySelectorAll('button'); 
+    const div = document.querySelector('div');
+    let t = 'br';
+    let htmlElement = new RegExp(`<${t}>`);
+
+    div.addEventListener('mouseover', toolTips);
+    
+
+    function toolTips() {
+        for(let i = 0; i < buttons.length; i++) {
+            let span = document.createElement('span');
+            let text = buttons[i].dataset.tooltip;
+            if (text.includes(t)) {
+                text = text.replace(htmlElement, '\n');
+            }
+            span.innerText = text;
+            span.classList.add('span');
+            buttons[i].append(span);
+        }
+           
+    }
+    
+  </script>
+
+</body>
+</html>

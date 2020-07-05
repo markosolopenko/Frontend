@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<body>
+    <article>
+        This is an article.
+        <div>
+            <p>This is a paragraph inside of a div inside of an article.</p>
+        </div>
+        <input id="edit_user" type="text" value="My user name">
+        <ul class="items">
+            <li>Item 1</li>
+            <li>Item 2</li>
+        </ul>
+    </article>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.js"></script>
+    <script>
+        // getters
+        $(document).ready(function(){
+            $("article").html(); // innerHTML
+            $("article").text(); // innerText
+            $("input").val(); // value
+        });
+        // setters 
+        $(document).ready(function(){
+            $("article").html("<h1>Here's some large text.</h1>"); // innerHTML
+            $("li").text("hi!"); // innerText
+            $("input").val("new value"); // value = new value
+        });
+        // 
+        $(document).ready(function(){
+            $("article").addClass("hidden"); // add a class
+            $("article").removeClass("hidden"); // remove a class
+            $("article").toggleClass("hidden"); // toggle the class (if on -> off, if off -> on)
+        });
+
+        // css 
+        $(document).ready(function(){
+            $("article").css("background-color", "red");
+            $("article").css("background-color"); // "red"
+            $("article").attr("style", "display:flex;");
+            $("article").data("id", "1");
+        });
+    </script>
+</body>
+</html>

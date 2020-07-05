@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>jQuery Exercise</title>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.js"></script>
+</head>
+<body>
+    <div id="container">
+        <h1 id="welcome"></h1>
+        <div class="list-container">
+            <ul class="nav">
+                <li class="nav-item">Home</li>
+                <li class="nav-item">About Us</li>
+                <li class="nav-item">Contact</li>
+                <li class="nav-item">Careers</li>
+                <li class="nav-item">Apply</li>
+            </ul>
+        </div>
+    </div>
+    <footer>
+        <div class="footer-container">
+            <ul class="footer-nav">
+                <li class="footer-nav-item">Learn More</li>
+                <li class="footer-nav-item">Blog</li>
+                <li class="footer-nav-item">Email Us</li>
+            </ul>
+        </div>
+    </footer>
+
+    <script>
+        $(document).ready(function() {
+            let footer = $('footer');
+            let div = $('#container');
+            let li = $('.nav li');
+            let thirdLi = $('.list-container ul li:nth-child(3)');
+            let last = $('ul li:last-child')
+            // console.log(div, footer, li);
+            console.log(last);
+        });
+    </script>
+</body>
+</html>

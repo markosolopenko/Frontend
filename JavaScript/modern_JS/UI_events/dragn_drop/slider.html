@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <link rel="stylesheet" href="style.css">
+</head>
+<style>
+    .slider {
+        border-radius: 5px;
+        background: #E0E0E0;
+        background: linear-gradient(left top, #E0E0E0, #EEEEEE);
+        width: 310px;
+        height: 15px;
+        margin: 125px;
+    }
+
+    .thumb {
+        width: 10px;
+        height: 25px;
+        border-radius: 3px;
+        position: relative;
+        left: 10px;
+        top: -5px;
+        background: blue;
+        cursor: pointer;
+    }
+</style>
+
+<body>
+
+  <div id="slider" class="slider">
+    <div class="thumb"></div>
+  </div>
+
+  <script>
+    let thumb = document.querySelector('.thumb');
+    let slider = document.querySelector('.slider');
+    let barierRigth = parseInt(slider.clientWidth - thumb.clientWidth);
+    let barierLeft = 0;
+    
+
+    thumb.onmousedown = function(event) {
+        event.preventDefault();
+
+        let shiftX = event.clientX - thumb.getBoundingClientRect().left;
+        
+
+        function onMouseMove(event) {
+            thumb.style.left = event.clientX - shiftX - slider.getBoundingClientRect().left + 'px';
+
+            if(parseInt(thumb.style.left) >= barierRigth) {
+    
+                thumb.style.left = barierRigth + 'px';
+            }else if(parseInt(thumb.style.left) <= barierLeft) {
+
+                thumb.style.left = barierLeft + 'px';
+       
+            }
+        }
+
+        // move the ball on mousemove
+        document.addEventListener('mousemove', onMouseMove);
+        document.addEventListener('mouseup', onMouseUp);
+
+
+        function onMouseUp() {
+            document.removeEventListener('mouseup', onMouseUp);
+            document.removeEventListener('mousemove', onMouseMove);
+        }
+
+    };
+
+    thumb.ondragstart = function() {
+        return false;
+    };
+  </script>
+
+</body>
+</html>
