@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+      
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/89b7791523.js" crossorigin="anonymous"></script>
+
+</head>
+<body>
+   
+    <div class="favorite__films">
+        <h1>My favorite Movies</h1>
+
+        <form action="">
+            <span>Title</span>
+            <input type="text" name="title" id="title">
+            <span>Rating</span>
+            <input type="number" name="rating" id="rating" placeholder="Put rating from 0 to 10">
+
+            <button class="add__movies">Add Movie</button>
+        </form>
+    </div>
+    <div class="form__films">
+        <table class="movies" table-sortable>
+            <thead>
+                <tr>
+                    <th class='first'>Title<i class="fas fa-arrow-up" id='i__film__up'></i><i class="fas fa-arrow-down" id='i__film__down'></i></th>
+                    <th class="second">Raiting<i class="fas fa-arrow-up" id="i__rait__up"></i><i class="fas fa-arrow-down" id='i__rait__down'></i></th>
+                    <th class="second">Delete</th>
+                </tr>
+            </thead>
+            <tbody>
+
+            </tbody>
+        </table>
+    </div>
+
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.js"></script>
+
+
+    <script>
+     
+        
+        $(document).ready(function() {
+            $('.add__movies').on('click', function(e) {
+                e.preventDefault();
+                if($('#title').val() != '' && ($('#rating').val() != '' && +$('#rating').val() <= 10)) {
+                    var $tr = $('<tr>');
+                    var $newFilm = $('<td>', {
+                        text: $('#title').val()
+                    });
+                    
+                    var $newRat = $('<td>', {
+                        text: $('#rating').val()
+                    });
+                    var $newTd = $('<td>'); 
+                        var $newButton = $('<button>', {
+                            text: 'Delete'
+                        }).addClass('delete');
+                    $newTd.append($newButton);
+
+
+                    $tr.append($newFilm, $newRat, $newTd);
+                    $('.movies tbody').append($tr); 
+                    $('#title').val('');
+                    $('#rating').val('')
+                }  
+            });
+            
+            $('.movies').on('click', function(e) {
+                if(e.target.className === 'delete') {
+                    e.target.parentElement.parentElement.remove();
+                }
+            });
+            $('#i__film__up').on('click', function(e) {
+                const $table = $('table');
+                const rows = Array.from($('tbody tr'));
+                
+
+                const sortedRows = rows.sort((a, b) => {
+                    
+                    const aColText = a.children[0].innerText; 
+                    const bColText =  b.children[0].innerText;
+
+                    return aColText > bColText ? 1: -1;
+                });
+                const tBody = $('tbody'); 
+                const tBodyTr = $('tbody tr');
+                for(let i = 0; i < tBodyTr.length; i++) {
+                    tBodyTr[i].remove();
+                }
+                tBody.append(...sortedRows);
+            });
+            $('#i__rait__up').on('click', function(e) {
+                const $table = $('table');
+                const rows = Array.from($('tbody tr'));
+                
+
+                const sortedRows = rows.sort((a, b) => {
+                    
+                    const aColText = a.children[1].innerText; 
+                    const bColText =  b.children[1].innerText;
+
+                    return aColText > bColText ? 1: -1;
+                });
+                const tBody = $('tbody'); 
+                const tBodyTr = $('tbody tr');
+                for(let i = 0; i < tBodyTr.length; i++) {
+                    tBodyTr[i].remove();
+                }
+                tBody.append(...sortedRows);
+            });
+
+            $('#i__film__down').on('click', function(e) {
+                const $table = $('table');
+                const rows = Array.from($('tbody tr'));
+                
+
+                const sortedRows = rows.sort((a, b) => {
+                    
+                    const aColText = a.children[0].innerText; 
+                    const bColText =  b.children[0].innerText;
+
+                    return aColText < bColText ? 1: -1;
+                });
+                const tBody = $('tbody'); 
+                const tBodyTr = $('tbody tr');
+                for(let i = 0; i < tBodyTr.length; i++) {
+                    tBodyTr[i].remove();
+                }
+                tBody.append(...sortedRows);
+            });
+            $('#i__rait__down').on('click', function(e) {
+                const $table = $('table');
+                const rows = Array.from($('tbody tr'));
+                
+
+                const sortedRows = rows.sort((a, b) => {
+                    
+                    const aColText = a.children[1].innerText; 
+                    const bColText =  b.children[1].innerText;
+
+                    return aColText < bColText ? 1: -1;
+                });
+                const tBody = $('tbody'); 
+                const tBodyTr = $('tbody tr');
+                for(let i = 0; i < tBodyTr.length; i++) {
+                    tBodyTr[i].remove();
+                }
+                tBody.append(...sortedRows);
+            });
+
+        });
+
+
+    </script>
+</body>
+</html>

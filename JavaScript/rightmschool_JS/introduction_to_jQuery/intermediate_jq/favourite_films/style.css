@@ -1,0 +1,111 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    height: 980px;
+    background: linear-gradient(#9198e5, #e66465);
+}
+
+.favorite__films {
+    width: 100%;
+    text-align: center;
+}
+h1 {
+    margin-bottom: 20px;
+    font-size: 60px;
+    color: aqua;
+}
+
+table {
+    margin-top: 20px;
+    width: 100%;
+    text-align: center;
+}
+table, th, td {
+    border-collapse: collapse;
+}
+th {
+    border: 2px solid black;
+    height: 40px;
+    font-size: 20px;
+    cursor: pointer;
+    background-color: #e66465;
+    
+}
+td {
+    border: 1px solid black;
+    background-color: rgb(255, 255, 255);
+    font-size: 18px;
+    height: 50px;
+}
+.first {
+    width: 60%;
+    position: relative;
+}
+.second {
+    position: relative;
+    width: 20%;
+}
+
+i {
+    font-size: 13px;
+}
+.fa-arrow-up {
+    position: absolute;
+    margin-left: 10px;
+    top: 6px;
+}
+i + i {
+    position: absolute;
+    bottom: 6px;
+    margin-left: 10px;
+}
+i:hover {
+    color: green;
+}
+.add__movies {
+    font-size: 16px;
+    height: 40px;
+    width: 100px;
+    border-radius: 5px;
+    cursor: pointer;
+    border: none;
+}
+.add__movies:hover {
+    background-color: rgb(60, 255, 0);
+}
+input {
+    padding: .4em;
+    margin-right: 20px;
+    border-radius: 5px;
+    background-color: rgb(236, 227, 208);
+    font-size: 19px;
+}
+span {
+    font-size: 20px;
+    font-weight: bold;
+}
+
+input::placeholder {
+    font-size: 15px;
+
+}
+input[name='rating'] {
+    font-size: 19px;
+}
+.delete {
+    width: 130px;
+    height: 30px;
+    font-size: 17px;
+    background-color: red;
+    color: white;
+    font-weight: bold;
+    border: none;
+    border-radius: 5px;
+}
+.delete:hover {
+    background-color: rgb(206, 23, 23);
+    cursor: pointer;
+}
