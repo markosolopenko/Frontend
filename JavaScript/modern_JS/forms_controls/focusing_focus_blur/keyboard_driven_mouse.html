@@ -1,0 +1,63 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <style>
+    #mouse {
+      display: inline-block;
+      cursor: pointer;
+      margin: 0;
+    }
+
+    /* #mouse:focus {
+        border: 1px dashed black;
+      /* outline: 1px dashed black; */
+    /* } */ 
+  </style>
+</head>
+
+<body>
+
+  <p>Click on the mouse and move it with arrow keys.</p>
+
+  <pre id="mouse">
+ _   _
+(q\_/p)
+ /. .\
+=\_t_/=   __
+ /   \   (
+((   ))   )
+/\) (/\  /
+\  Y  /-'
+ nn^nn
+</pre>
+
+
+  <script>
+    let mouse = document.querySelector('#mouse');
+
+    document.addEventListener('click', function(e) {
+        if(e.target.tagName === 'PRE'){
+            mouse.style.border = '1px dashed black';
+        }else {
+            mouse.style.border = 'none';
+        }
+    });  ;
+    document.onkeydown = function(event) {
+       let border = mouse.style.border;
+        if(event.key === 'ArrowUp' && border != '') {
+            mouse.style.marginTop = +mouse.style.marginTop.split('px').join('') - mouse.clientHeight + 'px';
+        }else if(event.key === 'ArrowDown' && border != '') {
+            mouse.style.marginTop = +mouse.style.marginTop.split('px').join('') + mouse.clientHeight + 'px';
+        }else if(event.key === 'ArrowLeft' && border != '') {
+            mouse.style.marginLeft = +mouse.style.marginLeft.split('px').join('') - mouse.clientWidth + 'px';
+        }else if(event.key === 'ArrowRight' && border != '') {
+            mouse.style.marginLeft = +mouse.style.marginLeft.split('px').join('') + mouse.clientWidth + 'px';
+        }
+    }
+  </script>
+
+</body>
+
+</html>

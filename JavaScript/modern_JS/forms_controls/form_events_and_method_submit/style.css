@@ -1,0 +1,45 @@
+html,
+body {
+  padding: 0;
+  margin: 0;
+}
+
+#prompt-form {
+  padding: 5px 5px 5px 70px;
+  width: 200px;
+  border: 1px solid black;
+  background: white url(https://en.js.cx/clipart/prompt.png) no-repeat left 5px;
+  vertical-align: middle;
+
+  display: none;
+}
+
+#prompt-form-container { 
+  position: fixed;
+  top: 300px;
+  left: 800px;
+  z-index: 9999;
+
+  text-align: center;
+}
+
+#prompt-form-container:before {
+  display: inline-block;
+  height: 100%;
+  content: '';
+  vertical-align: middle;
+}
+
+#prompt-form input[name="text"] {
+  display: block;
+  margin: 5px;
+  width: 180px;
+}
+
+.button__click {
+    display: inline-block;
+    border: 2px solid black;
+    padding: .5em;
+    background-color: gainsboro;
+}
+

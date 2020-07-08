@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <select id="genres">
+        <option value="rock">Rock</option>
+        <option value="blues" selected>Blues</option>
+      </select>
+
+
+      <script>
+        let select = document.querySelector('#genres');
+            
+        select.multiple = true;
+        let newOption = new Option('Classics', 'classics', true, true);
+        select.append(newOption);
+
+
+        let selected = Array.from(select.options)
+            .filter(option => option.selected)
+            .map(option => option.value + ' ' + option.innerText);
+
+        alert(selected)
+
+    </script>
+</body>
+</html>
